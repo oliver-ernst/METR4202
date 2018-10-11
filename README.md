@@ -1,10 +1,11 @@
-### Example
+## Example:
 ```
 [output1, output2, ...] = function_name(input1, input2, ...)
 % these are the details for the function, feel free to break these big functions into smaller functions.
 % smaller functions are easier to test and debug
 ```
 ## Functions:
+### Calibrate camera:
 ```
 [intrinsics, extrinsics] = calibrate(camera_img_set) \n
 % Takes in the given camera image set and returns the intrinsics and extrinsics of the camera
@@ -13,6 +14,7 @@
 % Outputs: intrinsics     - SPEC REQUIRED
 %          extrinsics     - SPEC REQUIRED
 ```
+### Transform scene:
 ```
 [top_down_img] = transform_scene(intrinsics, extrinsics, scene_img)
 % Takes the given camera intrinsics and given scene image and transforms the image to a top down view of  
@@ -23,6 +25,7 @@
 %                           size (1280,1024,3)
 % Outputs: top_down_img   - transformed scene image as a top down view of the workspace (WORK OUT SIZE)
 ```
+### Detect scene objects:
 ```
 [cyl,cap,clutter_bnds] = detect_scene(top_down_img)
 % Takes the transformed top down scene image and returns the boundary locations for the cylinder, pen 
@@ -36,6 +39,7 @@
 %                           Array of (n,1) cells of boundary points.  These have a increased radius for 
 %                           safety added.
 ```
+### Motion planning:
 ```
 [path_points] = plan_motion(cyl,cap,clutter_bnds)
 % Does motion planning given the locations of the cylinder, pen cap, and clutter in the scene
