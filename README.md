@@ -1,10 +1,10 @@
-## functions:
-
+# Example
 ```
 [output1, output2, ...] = function_name(input1, input2, ...)
 % these are the details for the function, feel free to break these big functions into smaller functions.
 % smaller functions are easier to test and debug
 ```
+## Functions:
 ```
 [intrinsics, extrinsics] = calibrate(camera_img_set) \n
 % Takes in the given camera image set and returns the intrinsics and extrinsics of the camera
