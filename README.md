@@ -50,5 +50,6 @@
 %                           Array of (n,1) cells of boundary points.  These have a increased radius for 
 %                           safety added.
 % Outputs: path_points    - Array of n points of which the arm needs to move between to get from the 
-% cylinder to the pen cap.  First point is the Cylinder location, final point is the cap location.
+%                           cylinder to the pen cap.  First point is the Cylinder location, final point 
+%                           is the cap location.
 ```
